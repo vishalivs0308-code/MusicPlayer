@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
-    <style>
-        body {
-            background-color: #000000;
-            color: #8ab4f8;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <title>Music Player</title>
+        <link rel="stylesheet" href="style.css" />
+        </head>
+        <body>
+          <main class="player">
+              <header class="player__header">
+                    <h1 class="title">Music Player</h1>
+                          <p class="sub">Dark theme • Royal blue accents</p>
+                              </header>
 
-        h1 {
-            color: #4D7CFF;
-        }
-    </style>
-</head>
-<body>
-    <h1>My Music Player Project</h1>
-    <p>This is my first file inside GitHub repository!</p>
-</body>
-</html>
+                                  <section class="now">
+                                        <div class="cover" id="cover" aria-hidden="true"></div>
+
+                                              <div class="meta">
+                                                      <div class="track-info">
+                                                                <div id="track-title" class="track-title">No track selected</div>
+                                                                          <div id="track-artist" class="track-artist">—</div>
+                                                                                  </div>
+
+                                                                                          <div class="controls">
+                                                                                                    <button id="prevBtn" class="btn" title="Previous">⏮</button>
+                                                                                                              <button id="playPauseBtn" class="btn play" title="Play/Pause">▶</button>
+                                                                                                                        <button id="nextBtn" class="btn" title="Next">⏭</button>
+                                                                                                                                </div>
+
+                                                                                                                                        <div class="progress-wrap">
+                                                                                                                                                  <span id="currentTime" class="time">0:00</span>
+                                                                                                                                                            <input id="progress" class="progress" type="range" min="0" max="100" value="0" />
+                                                                                                                                                                      <span id="duration" class="time">0:00</span>
+                                                                                                                                                                              </div>
+
+                                                                                                                                                                                      <div class="extras">
+                                                                                                                                                                                                <label class="vol">
+                                                                                                                                                                                                            🔊
+                                                                                                                                                                                                                        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8" />
+                                                                                                                                                                                                                                  </label>
+                                                                                                                                                                                                                                            <button id="shuffleBtn" class="btn" title="Shuffle">🔀</button>
+                                                                                                                                                                                                                                                      <button id="repeatBtn" class="btn" title="Repeat">🔁</button>
+                                                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                        </section>
+
+                                                                                                                                                                                                                                                                            <section class="playlist" id="playlist">
+                                                                                                                                                                                                                                                                                  <h2>Playlist</h2>
+                                                                                                                                                                                                                                                                                        <ul id="trackList" class="track-list"></ul>
+                                                                                                                                                                                                                                                                                            </section>
+                                                                                                                                                                                                                                                                                              </main>
+
+                                                                                                                                                                                                                                                                                                <script src="script.js"></script>
+                                                                                                                                                                                                                                                                                                </body>
+                                                                                                                                                                                                                                                                                                </html>
